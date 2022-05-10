@@ -2,32 +2,238 @@ html {
   font-family: sans-serif;
 }
 
-body {
-  margin: 0;
-}
-
 button {
-  font: inherit;
+  position: relative;
+  padding: 8px 16px;
   background: #5102ac;
-  border: 1px solid #5102ac;
-  color: white;
-  cursor: pointer;
-  padding: 1.25rem 2.5rem;
-  font-size: 1.5rem;
-}
-
-button:focus {
+  border: none;
   outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: auto;
+  height: auto;
 }
 
 button:hover,
 button:active {
   background: #832ee4;
-  border-color: #832ee4;
+}
+
+.button__text {
+  font: bold 14px "JetBrains Mono", san-serif;
+  color: #ffffff;
+  transition: all 0.2s;
+}
+
+.button--loading .button__text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.button--loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.container {
+  width: auto;
+  height: auto;
 }
 
 #control-center {
+  position: absolute;
   border: 2px solid #ccc;
-  margin: 5rem;
-  padding: 2rem;
+  bottom: 10px;
+  left: 10px;
+}
+
+.title-1 {
+  width: auto;
+  height: 40px;
+  left: 10px;
+  right: 10px;
+  top: 9px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 -1px 5px -1px #000;
+  clip-path: inset(-5px -5px -2px -5px);
+  position: absolute;
+  background: linear-gradient(to right, #000428, #004e92);
+}
+
+.title-2 {
+  width: auto;
+  height: 40px;
+  left: 10px;
+  right: 10px;
+  top: 9px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 -1px 5px -1px #000;
+  clip-path: inset(-5px -5px -2px -5px);
+  position: absolute;
+  background: linear-gradient(to right, #02aab0, #00cdac);
+}
+
+.title-3 {
+  width: auto;
+  height: 40px;
+  left: 10px;
+  right: 10px;
+  top: 9px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 -1px 5px -1px #000;
+  clip-path: inset(-5px -5px -2px -5px);
+  position: absolute;
+  background: linear-gradient(to right, #c33764, #1d2671);
+}
+
+.title-text {
+  text-align: center;
+  position: absolute;
+  left: 20px;
+  color: azure;
+  font: bold 20px "JetBrains Mono", san-serif;
+}
+
+.top-left {
+  top: 0px;
+  left: 0px;
+  background-color: rgb(255, 164, 164);
+  width: 55%;
+  height: 70%;
+  position: absolute;
+}
+
+.top-right {
+  top: 0px;
+  right: 0px;
+  bottom: 30px;
+  background-color: rgb(158, 255, 158);
+  width: 45%;
+  height: calc(100% - 30px);
+  position: absolute;
+}
+
+.bottom-left {
+  bottom: 30px;
+  left: 0px;
+  background-color: rgb(166, 166, 255);
+  width: 55%;
+  height: calc(30% - 30px);
+  position: absolute;
+}
+
+.sections {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  box-shadow: 0 -1px 5px -1px #000;
+  clip-path: inset(0px -5px -5px -5px);
+}
+
+.pdf-viewer {
+  width: auto;
+  height: auto;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  top: 49px;
+}
+
+.description {
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 30px;
+  width: 65%;
+  position: absolute;
+  background-color: burlywood;
+  padding: 0px 0px;
+  line-height: 0px;
+  overflow: hidden;
+
+}
+
+.github {
+  height: 30px;
+  width: 35%;
+  bottom: 0px;
+  right: 0px;
+  position: absolute;
+  background-color: rgb(49, 121, 255);
+  font: 20px "Press Start 2P", san-serif
+}
+
+.form {
+  width: 60%;
+  height: 80%;
+  top: 10%;
+  bottom: 10%;
+  left: 20%;
+  right: 20%;
+  background: #fff;
+  border-radius: 5px;
+  position: absolute;
+
+
+}
+
+[hidden] {
+  display: none;
+}
+
+.disabled {
+  color: "#a3a3a3";
+}
+
+.enabled {
+  background-color: "#5102ac";
+}
+
+.subject_numbers {
+  height: 50px;
+  min-width: 200px;
+  width: 90%;
+  margin: 15px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font: bold 15px JetBrains Mono, san-serif;
 }
