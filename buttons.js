@@ -93,7 +93,7 @@ document.getElementById('next-btn').onclick = function () {
 
         $(function () {
             $.ajax({
-                url: 'http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=2',
+                url: 'http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=2',
                 type: "GET",
                 dataType: 'json',
                 error: function () {
@@ -155,7 +155,7 @@ document.getElementById('next-btn').onclick = function () {
                     $(function () {
                         $.ajax({
 
-                            url: 'http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=4',
+                            url: 'http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=4',
                             type: "GET",
                             dataType: 'json',
                             success: function (res) {
@@ -199,7 +199,7 @@ document.getElementById('next-btn').onclick = function () {
                                     $(function () {
                                         $.ajax({
 
-                                            url: 'http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
+                                            url: 'http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
                                             type: "GET",
                                             dataType: 'json',
                                             success: function (res) {
@@ -226,7 +226,7 @@ document.getElementById('next-btn').onclick = function () {
                                                 $(function () {
                                                     $.ajax({
 
-                                                        url: 'http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3',
+                                                        url: 'http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3',
                                                         type: "GET",
                                                         dataType: 'json',
                                                         success: function (res) {
@@ -264,7 +264,7 @@ document.getElementById('next-btn').onclick = function () {
                                     $(function () {
                                         $.ajax({
 
-                                            url: 'http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3',
+                                            url: 'http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3',
                                             type: "GET",
                                             dataType: 'json',
                                             success: function (res) {
@@ -300,7 +300,7 @@ document.getElementById('next-btn').onclick = function () {
                                     $(function () {
                                         $.ajax({
 
-                                            url: 'http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
+                                            url: 'http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
                                             type: "GET",
                                             dataType: 'json',
                                             success: function (res) {
@@ -363,7 +363,7 @@ document.getElementById('next-btn').onclick = function () {
         $(function () {
             $.ajax({
 
-                url: 'http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
+                url: 'http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
                 type: "GET",
                 dataType: 'json',
                 success: function (res) {
@@ -462,21 +462,21 @@ document.getElementById('pub-btn').onclick = function () {
 
     if (subject_sel == "yes") {
         if (subject_comb == "n2-4") {
-            mergeAllPDFs(["http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "n2-4-1-3") {
-            mergeAllPDFs(["http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=subject", "http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel3 + "&filetype=subject", "http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=subject", "http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel3 + "&filetype=subject", "http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "n2-4-3") {
-            mergeAllPDFs(["http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel3 + "&filetype=subject", "http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel3 + "&filetype=subject", "http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "n2-4-1") {
-            mergeAllPDFs(["http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=subject", "http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=subject", "http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "o-1") {
-            mergeAllPDFs(["http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=subject"]);
+            mergeAllPDFs(["http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=subject"]);
         }
     } else {
         if (subject_comb.includes("n2-4")) {
-            mergeAllPDFs(["http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "o-1") {
-            mergeAllPDFs(["http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=subject"]);
+            mergeAllPDFs(["http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=subject"]);
         }
     }
 

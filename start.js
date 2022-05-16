@@ -14,7 +14,7 @@ document.getElementById('get-btn').onclick = function () {
   getBtn.classList.add("button--loading");
   $(function () {
     $.ajax({
-      url: 'http://192.168.1.106:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/data.php?q=class&schooltype=1',
+      url: 'http://reverse.attone.live:8080/https://www.iep.edu.gr/services/mitroo/trapeza/public/data.php?q=class&schooltype=1',
       type: "GET",
       dataType: 'json',
       success: function (res) {
