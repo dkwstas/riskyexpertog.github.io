@@ -6,6 +6,10 @@ const getBtn = document.getElementById('get-btn');
 
 document.getElementById('get-btn').onclick = function () {
   getBtn.disabled = true;
+  document.getElementById('w_p').textContent = "Επιλέξτε Τάξη και Μάθημα από τα παραπάνω μενού";
+  document.getElementById('warning').style.borderColor = "#3e52d6";
+  document.getElementById('w_s').innerHTML = "&nbsp;&#9432;&nbsp;";
+  document.getElementById('w_s').style.color = "#3e52d6";
   getBtn.style.backgroundColor = "#a3a3a3";
   getBtn.classList.add("button--loading");
   $(function () {
@@ -32,7 +36,7 @@ document.getElementById('get-btn').onclick = function () {
           i++
         }
 
-        document.getElementById('class_id').remove('op_def')
+        
         document.getElementById('class_id').disabled = false;
         getBtn.classList.remove("button--loading");
 
@@ -43,7 +47,6 @@ document.getElementById('get-btn').onclick = function () {
 
         getBtn.style.display = "none";
 
-        document.getElementById("next-btn").style.display = "block";
         document.getElementById("prev-btn").style.display = "block";
 
       }

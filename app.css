@@ -237,3 +237,19 @@ button:active {
   justify-content: space-around;
   font: bold 15px JetBrains Mono, san-serif;
 }
+
+.warning{
+  display: flex;
+  align-items: center;
+  align-content: flex-start;
+  
+  width: 90%;
+  height: 7%;
+  bottom: 5px;
+  right: 5%;
+  left: 5%;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid red;
+  position: absolute;
+  border-radius: 5px;
+}
