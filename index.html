@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>banka</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="selectstyle.css">
+  <link href='https://fonts.googleapis.com/css?family=JetBrains+Mono' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="start.js" defer></script>
+  <script src="buttons.js" defer></script>
+  <script src="selects.js" defer></script>
+  <script src="https://unpkg.com/pdf-lib"></script>
+  <script src="https://unpkg.com/@pdf-lib/fontkit"></script>
+</head>
+
+<body>
+  <!--CONTAINER-->
+  <div class="container">
+
+    <div id="top-left" class="top-left">
+      <div class="title-1">
+        <div class="title-text">
+          <p>Τεστ Προσομοίωσης Τράπεζας Θεμάτων&nbsp;<span class="fa" style="color:rgb(247, 29, 14);">&#xf19c;</span>
+          </p>
+        </div>
+      </div>
+      <div id="form_section" class="sections"
+        style="width: auto; height: auto; bottom: 10px; left: 10px; right: 10px; top: 49px;">
+
+        <div class="form" id="form_id" style="overflow: hidden;">
+          <div class="flexbox-top"
+            style="display:flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; right: 0px; left: 0px; top:0px; height: 15%; width: 100%; background-color: rgb(188, 147, 194);">
+            <h1 style="font: bold 26px JetBrains Mono, san-serif;">Δημιουργία διαγωνίσματος</h1>
+
+          </div>
+          <div class="flexbox-side"
+            style="display:flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly; position: absolute; right: 0px; top: 15%; bottom: 0px; height: auto; width: 65%; background-color: rgb(114, 163, 163); overflow: auto;">
+            <div class="selectdiv">
+              <label>
+                <select style="background-color:rgb(247, 29, 14)" id="class_id" disabled>
+                  <option selected id="op_defc">Επιλέξτε τάξη ΓΕΛ</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="selectdiv">
+              <label>
+                <select id="lesson_id" disabled>
+                  <option selected id="op_defl">Επιλέξτε μάθημα</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="flexbox-left"
+            style="font: bold 20px JetBrains Mono, san-serif; display:flex; flex-direction: column; align-items: flex-end; justify-content: space-evenly; position: absolute; left: 0px; top: 15%; bottom: 0px; height: auto; width: 35%; background-color: rgb(110, 145, 108);">
+            <h3>Βήμα 1ο:</h3>
+            <h3>Βήμα 2ο:</h3>
+          </div>
+
+        </div>
+        <div class="warning" id="warning">
+          <span id="w_s" style="color: red; font-size: 32px;">&nbsp;&#9888;&nbsp;</span>
+          <p id="w_p" style="font: bold 16px JetBrains Mono, san-serif;">Ξεκινήστε πατώντας <span
+              style="background-color: #5102ac; color:white;">Εκκίνηση</span> στο Παράθυρο ελέγχου</p>
+        </div>
+      </div>
+
+      <div id="subject_section" class="sections"
+        style="width: auto; height: auto; bottom: 10px; left: 10px; right: 10px; top: 49px;" hidden>
+
+        <div class="form" id="subject_id" style="overflow: hidden;">
+          <div class="flexbox-top"
+            style="display:flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; right: 0px; left: 0px; top:0px; height: 15%; width: 100%; background-color: rgb(188, 147, 194);">
+            <h1 style="font: bold 26px JetBrains Mono, san-serif;">Δημιουργία διαγωνίσματος</h1>
+
+          </div>
+          <div class="flexbox-side"
+            style="display:flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly; position: absolute; right: 0px; top: 15%; bottom: 0px; height: auto; width: 65%; background-color: rgb(114, 163, 163); overflow: auto;">
+
+
+
+            <div
+              style="display:flex; flex-direction: column; align-items: center; justify-content: space-evenly; width: 100%;">
+              <div class="subject_numbers">
+                <p id="sub2_1"> </p>
+                <p id="sub2_2"> </p>
+                <p id="sub2_3"> </p>
+              </div>
+
+            </div>
+
+            <div
+              style="display:flex; flex-direction: column; align-items: center; justify-content: space-evenly; width: 100%;">
+              <div class="subject_numbers">
+                <p id="sub4_1"> </p>
+                <p id="sub4_2"> </p>
+                <p id="sub4_3"> </p>
+              </div>
+
+            </div>
+
+            <div id="opt_div"
+              style="display:flex; flex-direction: column; align-items: center; justify-content: space-evenly; width: 100%;">
+              <div class="subject_numbers">
+                <button style="background-color:rgb(81, 253, 81);" id="yes" type="button" class="button">
+                  <span class="button__text">Ναι</span>
+                </button>
+                <button style="background-color:rgb(201, 201, 201);" id="no" type="button" class="button">
+                  <span class="button__text">Όχι</span>
+                </button>
+                
+              </div>
+            </div>
+
+          </div>
+
+
+
+          <div class="flexbox-left"
+            style="font: bold 20px JetBrains Mono, san-serif; display:flex; flex-direction: column; align-items: flex-end; justify-content: space-evenly; position: absolute; left: 0px; top: 15%; bottom: 0px; height: auto; width: 35%; background-color: rgb(110, 145, 108);">
+            <h3>Θέμα 2ο:</h3>
+            <h3>Θέμα 4ο:</h3>
+            <h3 id="opt_h3">Θέμα --:</h3>
+          </div>
+
+
+        </div>
+        <div class="warning" style="border-color:#535353;" id="warning1">
+          <span id="w_s1" style="color: rgb(83, 83, 83); font-size: 32px;">&nbsp;&#11165;&nbsp;</span>
+          <p id="w_p1" style="font: bold 16px JetBrains Mono, san-serif;">Πατήστε <span
+              style="background-color: #2a7979; color:white;">κλικ</span> πάνω στα θέματα για να τα δείτε/επιλέξετε και
+            μετά <span style="background-color: #5102ac; color:white;">Έκδοση</span></p>
+        </div>
+      </div>
+
+
+
+      <div id="subject_1_section" class="sections"
+        style="width: auto; height: auto; bottom: 10px; left: 10px; right: 10px; top: 49px;" hidden>
+
+        <div class="form" id="subject_1_id" style="overflow: hidden;">
+          <div class="flexbox-top"
+            style="display:flex; flex-direction: column; align-items: center; justify-content: center; position: absolute; right: 0px; left: 0px; top:0px; height: 15%; width: 100%; background-color: rgb(188, 147, 194);">
+            <h1 style="font: bold 26px JetBrains Mono, san-serif;">Δημιουργία διαγωνίσματος</h1>
+
+          </div>
+          <div class="flexbox-side"
+            style="display:flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly; position: absolute; right: 0px; top: 15%; bottom: 0px; height: auto; width: 65%; background-color: rgb(114, 163, 163); overflow: auto;">
+
+
+
+            <div
+              style="display:flex; flex-direction: column; align-items: center; justify-content: space-evenly; width: 100%;">
+              <div class="subject_numbers">
+                <p id="sub1_1"> </p>
+                <p id="sub1_2"> </p>
+                <p id="sub1_3"> </p>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="flexbox-left"
+            style="font: bold 20px JetBrains Mono, san-serif; display:flex; flex-direction: column; align-items: flex-end; justify-content: space-evenly; position: absolute; left: 0px; top: 15%; bottom: 0px; height: auto; width: 35%; background-color: rgb(110, 145, 108);">
+            <h3>Θέμα 1ο:</h3>
+          </div>
+        </div>
+
+        <div class="warning" style="border-color:#535353;" id="warning2">
+          <span id="w_s2" style="color: rgb(83, 83, 83); font-size: 32px;">&nbsp;&#11165;&nbsp;</span>
+          <p id="w_p2" style="font: bold 16px JetBrains Mono, san-serif;">Πατήστε <span
+              style="background-color: #2a7979; color:white;">κλικ</span> πάνω στα θέματα για να τα δείτε/επιλέξετε και
+            μετά <span style="background-color: #5102ac; color:white;">Έκδοση</span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <div class="top-right">
+    <div class="title-2">
+      <div class="title-text">
+        <p id="text-p">Οθόνη: Κατάσταση &#8594;<span id="span-p" style="color:rgb(224, 180, 122);"> Aναμονή</span></p>
+      </div>
+    </div>
+    <div class="sections pdf-viewer"><iframe id='pdf-viewer' style="width: 100%; height: 100%;" src="about:blank"
+        frameborder="0"></iframe></div>
+  </div>
+
+  <div class="bottom-left">
+    <div class="title-3">
+      <div class="title-text">
+        <p>Παράθυρο ελέγχου</p>
+      </div>
+
+    </div>
+    <div id="controls-group" class="sections"
+      style="width: auto; height: auto; bottom: 10px; left: 10px; right: 10px; top: 49px;">
+
+      <button id="get-btn" type="button" class="button">
+        <span class="button__text">Εκκίνηση</span>
+      </button>
+
+      <button id="prev-btn" type="button" class="button" hidden>
+        <span class="button__text">Προηγούμενο</span>
+      </button>
+
+      <button id="next-btn" type="button" class="button" hidden>
+        <span class="button__text">Επόμενο</span>
+      </button>
+
+      <button id="pub-btn" type="button" class="button" hidden>
+        <span class="button__text">Έκδοση</span>
+      </button>
+
+      <button id="reload-btn" type="button" class="button" hidden>
+        <span class="button__text">
+          &#10227;</span>
+      </button>
+
+
+    </div>
+  </div>
+
+
+  </div>
+
+  <div class="description">
+    <small style="position: absolute;top: 0px; font: 26px Alegreya, san-serif;">&nbsp;Μακάρι να πέσει η τράπεζα τη μέρα
+      των εξετάσεων...</small>
+    <a href="banka.html" style="font: 20px Roboto Condensed, san-serif; left:70%; top: 5px; position: absolute;">banka</a>
+
+
+
+  </div>
+  <div class="github">
+    <marquee behaviour="scroll" direction="left" style="position: absolute;top: 3px;">βρείτε το λογισμικό στο
+      <a href="https://github.com" target="_blank">
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" width="91.87px"
+          height="24px" />
+      </a>
+    </marquee>
+  </div>
+</body>
+
+</html>
