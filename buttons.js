@@ -152,6 +152,24 @@ document.getElementById('next-btn').onclick = function () {
                     document.getElementById('span-p').textContent = " Σε λειτουργία Θ2_" + code2_1;
                     document.getElementById('span-p').style.color = "#74eb34";
 
+                    document.getElementById("pub-btn").style.display = "block";
+                    document.getElementById('sub4_1').textContent = code4_1;
+
+                    document.getElementById('sub4_1').style.backgroundColor = "#1937fa";
+                    document.getElementById('sub4_1').style.color = "#ebebeb";
+                    sel4 = document.getElementById('sub4_1').textContent
+
+                    document.getElementById('sub4_2').textContent = code4_2;
+                    document.getElementById('sub4_3').textContent = code4_3;
+
+                    document.getElementById("next-btn").classList.remove("button--loading");
+                    document.getElementById("next-btn").disabled = false;
+                    document.getElementById("next-btn").removeAttribute('style');
+
+                    document.getElementById('form_section').style.display = "none";
+                    document.getElementById('subject_section').style.display = "block";
+                    document.getElementById("next-btn").style.display = "none";
+
                     $(function () {
                         $.ajax({
 
