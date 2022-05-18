@@ -7,6 +7,7 @@ var subject_comb
 var subject_sel = "yes"
 var pagenumber = 0
 var maxpages = 0
+var loops = 0
 
 document.getElementById('prev-btn').onclick = function () {
 
@@ -450,22 +451,44 @@ document.getElementById('next-btn').onclick = function () {
 
 };
 
+(function label_loop() {
+    setTimeout(function () {
+        loops++
+        if(loops % 2 == 0){
+            document.getElementById('w_p1').innerHTML = "Αν το αρχείο δεν ανοίξει μετά από 10 δευτερόλεπτα, ελέγξτε αν ο φιλομετρητής σας το μπλοκάρει (στο πάνω μέρος της οθόνης)";
+            document.getElementById('warning1').style.borderColor = "#ff0000";
+            document.getElementById('w_s1').innerHTML = "&nbsp;&#9888;&nbsp;";
+            document.getElementById('w_s1').style.color = "#ff0000";
+            document.getElementById('w_p2').innerHTML = "Αν το αρχείο δεν ανοίξει μετά από 10 δευτερόλεπτα, ελέγξτε αν ο φιλομετρητής σας το μπλοκάρει (στο πάνω μέρος της οθόνης)";
+            document.getElementById('warning2').style.borderColor = "#ff0000";
+            document.getElementById('w_s2').innerHTML = "&nbsp;&#9888;&nbsp;";
+            document.getElementById('w_s2').style.color = "#ff0000";
+        } else {
+            document.getElementById('w_p1').innerHTML = "Η διαδικασία ολοκληρώθηκε πατήστε <span style=\"background-color: #5102ac; color:white;\">Ανανέωση &#10227;</span> στο Παράθυρο ελέγχου";
+            document.getElementById('warning1').style.borderColor = "#5102ac";
+            document.getElementById('w_s1').innerHTML = "&nbsp;&#10227;&nbsp;";
+            document.getElementById('w_s1').style.color = "#5102ac";
+            document.getElementById('w_p2').innerHTML = "Η διαδικασία ολοκληρώθηκε πατήστε <span style=\"background-color: #5102ac; color:white;\">Ανανέωση &#10227;</span> στο Παράθυρο ελέγχου";
+            document.getElementById('warning2').style.borderColor = "#5102ac";
+            document.getElementById('w_s2').innerHTML = "&nbsp;&#10227;&nbsp;";
+            document.getElementById('w_s2').style.color = "#5102ac";
+        }
+      label_loop()
+    }, 5000);
+  }());
+
 document.getElementById('pub-btn').onclick = function () {
+    loops++
+    label_loop();
     document.getElementById('pub-btn').disabled = true;
     document.getElementById('pub-btn').style.backgroundColor = "#a3a3a3";
     document.getElementById('pub-btn').classList.add("button--loading");
     console.log(sel2)
 
+
     document.getElementById('prev-btn').style.display = "none";
     document.getElementById('top-left').style.pointerEvents = 'none';
-    document.getElementById('w_p1').innerHTML = "Η διαδικασία ολοκληρώθηκε πατήστε <span style=\"background-color: #5102ac; color:white;\">Ανανέωση &#10227;</span> στο Παράθυρο ελέγχου";
-    document.getElementById('warning1').style.borderColor = "#5102ac";
-    document.getElementById('w_s1').innerHTML = "&nbsp;&#10227;&nbsp;";
-    document.getElementById('w_s1').style.color = "#5102ac";
-    document.getElementById('w_p2').innerHTML = "Η διαδικασία ολοκληρώθηκε πατήστε <span style=\"background-color: #5102ac; color:white;\">Ανανέωση &#10227;</span> στο Παράθυρο ελέγχου";
-    document.getElementById('warning2').style.borderColor = "#5102ac";
-    document.getElementById('w_s2').innerHTML = "&nbsp;&#10227;&nbsp;";
-    document.getElementById('w_s2').style.color = "#5102ac";
+
 
     console.log(subject_comb)
 
