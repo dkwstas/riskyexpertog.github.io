@@ -255,9 +255,6 @@ button:active {
 }
 
 .marquee {
-  
-  right: 0px;
-  width: auto;
   overflow: hidden;
   border: 1px solid #ccc;
   background: #ccc;
