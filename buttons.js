@@ -453,9 +453,9 @@ document.getElementById('next-btn').onclick = function () {
 
 document.getElementById('pub-btn').onclick = function () {
     if (loops == 0) {
+        label_loop();
         loops++
     }
-    label_loop();
     document.getElementById('pub-btn').disabled = true;
     document.getElementById('pub-btn').style.backgroundColor = "#a3a3a3";
     document.getElementById('pub-btn').classList.add("button--loading");
