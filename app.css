@@ -253,3 +253,10 @@ button:active {
   position: absolute;
   border-radius: 5px;
 }
+
+.marquee {
+  width: 300px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background: #ccc;
+}

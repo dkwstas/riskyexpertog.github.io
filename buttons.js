@@ -1,3 +1,7 @@
+$('.marquee').marquee({
+    direction: 'left'
+  });
+
 const { PDFDocument, rgb } = PDFLib
 var random_number2_1, random_number2_2, random_number2_3, random_number4_1, random_number4_2, random_number4_3, code2_1, code2_2, code2_3, code4_1, code4_2, code4_3, link2_1, link2_2, link2_3, link4_1, link4_2, link4_3
 var random_number1_1, random_number1_2, random_number1_3, random_number3, code1_1, code1_2, code1_3, code3, link1_1, link1_2, link1_3, link3
