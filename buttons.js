@@ -1,6 +1,6 @@
 $('.marquee').marquee({
     direction: 'left'
-  });
+});
 
 const { PDFDocument, rgb } = PDFLib
 var random_number2_1, random_number2_2, random_number2_3, random_number4_1, random_number4_2, random_number4_3, code2_1, code2_2, code2_3, code4_1, code4_2, code4_3, link2_1, link2_2, link2_3, link4_1, link4_2, link4_3
@@ -456,7 +456,9 @@ document.getElementById('next-btn').onclick = function () {
 };
 
 document.getElementById('pub-btn').onclick = function () {
-    loops++
+    if (loops == 0) {
+        loops++
+    }
     label_loop();
     document.getElementById('pub-btn').disabled = true;
     document.getElementById('pub-btn').style.backgroundColor = "#a3a3a3";
@@ -499,11 +501,11 @@ function label_loop() {
     setTimeout(function () {
         loops++
         if (loops % 2 == 0) {
-            document.getElementById('w_p1').innerHTML = "Αν το αρχείο δεν ανοίξει μετά από 10 δευτερόλεπτα, ελέγξτε αν ο φυλλομετρητής σας το μπλοκάρει (στο πάνω μέρος της οθόνης)";
+            document.getElementById('w_p1').textContent = "Αν το αρχείο δεν ανοίξει μετά από 10 δευτερόλεπτα, ελέγξτε αν ο φυλλομετρητής σας το μπλοκάρει (στο πάνω μέρος της οθόνης)";
             document.getElementById('warning1').style.borderColor = "#ff0000";
             document.getElementById('w_s1').innerHTML = "&nbsp;&#9888;&nbsp;";
             document.getElementById('w_s1').style.color = "#ff0000";
-            document.getElementById('w_p2').innerHTML = "Αν το αρχείο δεν ανοίξει μετά από 10 δευτερόλεπτα, ελέγξτε αν ο φυλλομετρητής σας το μπλοκάρει (στο πάνω μέρος της οθόνης)";
+            document.getElementById('w_p2').textContent = "Αν το αρχείο δεν ανοίξει μετά από 10 δευτερόλεπτα, ελέγξτε αν ο φυλλομετρητής σας το μπλοκάρει (στο πάνω μέρος της οθόνης)";
             document.getElementById('warning2').style.borderColor = "#ff0000";
             document.getElementById('w_s2').innerHTML = "&nbsp;&#9888;&nbsp;";
             document.getElementById('w_s2').style.color = "#ff0000";
