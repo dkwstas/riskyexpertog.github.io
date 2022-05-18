@@ -495,11 +495,11 @@ function label_loop() {
     setTimeout(function () {
         loops++
         if (loops % 2 == 0) {
-            document.getElementById('w_p1').innerHTML = "Αν το αρχείο δεν ανοίξει μετά από 10 δευτερόλεπτα, ελέγξτε αν ο φιλομετρητής σας το μπλοκάρει (στο πάνω μέρος της οθόνης)";
+            document.getElementById('w_p1').innerHTML = "Αν το αρχείο δεν ανοίξει μετά από 10 δευτερόλεπτα, ελέγξτε αν ο φυλλομετρητής σας το μπλοκάρει (στο πάνω μέρος της οθόνης)";
             document.getElementById('warning1').style.borderColor = "#ff0000";
             document.getElementById('w_s1').innerHTML = "&nbsp;&#9888;&nbsp;";
             document.getElementById('w_s1').style.color = "#ff0000";
-            document.getElementById('w_p2').innerHTML = "Αν το αρχείο δεν ανοίξει μετά από 10 δευτερόλεπτα, ελέγξτε αν ο φιλομετρητής σας το μπλοκάρει (στο πάνω μέρος της οθόνης)";
+            document.getElementById('w_p2').innerHTML = "Αν το αρχείο δεν ανοίξει μετά από 10 δευτερόλεπτα, ελέγξτε αν ο φυλλομετρητής σας το μπλοκάρει (στο πάνω μέρος της οθόνης)";
             document.getElementById('warning2').style.borderColor = "#ff0000";
             document.getElementById('w_s2').innerHTML = "&nbsp;&#9888;&nbsp;";
             document.getElementById('w_s2').style.color = "#ff0000";
