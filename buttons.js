@@ -78,6 +78,8 @@ document.getElementById('prev-btn').onclick = function () {
 document.getElementById('next-btn').onclick = function () {
     document.getElementById("next-btn").disabled = true;
     document.getElementById("next-btn").style.backgroundColor = "#a3a3a3";
+    document.getElementById("prev-btn").disabled = true;
+    document.getElementById("prev-btn").style.backgroundColor = "#a3a3a3";
     document.getElementById("next-btn").classList.add("button--loading");
 
 
@@ -396,20 +398,14 @@ document.getElementById('next-btn').onclick = function () {
                     document.getElementById('sub1_2').textContent = code1_2;
                     document.getElementById('sub1_3').textContent = code1_3;
 
-                    document.getElementById("next-btn").classList.remove("button--loading");
-                    document.getElementById("next-btn").disabled = false;
-                    document.getElementById("next-btn").removeAttribute('style');
-                    document.getElementById("pub-btn").style.display = "block";
-
                     document.getElementById('pdf-viewer').src = link1_1;
                     document.getElementById('pdf-viewer').src = document.getElementById('pdf-viewer').src
 
                     document.getElementById('span-p').textContent = " Σε λειτουργία Θ1_" + code1_1;
                     document.getElementById('span-p').style.color = "#74eb34";
 
-                    document.getElementById('form_section').style.display = "none";
+                    f_show();
                     document.getElementById('subject_1_section').style.display = "block";
-                    document.getElementById("next-btn").style.display = "none";
 
                 }
             });
@@ -430,6 +426,10 @@ document.getElementById('next-btn').onclick = function () {
         document.getElementById("next-btn").classList.remove("button--loading");
         document.getElementById("next-btn").disabled = false;
         document.getElementById("next-btn").removeAttribute('style');
+        document.getElementById("prev-btn").disabled = false;
+        document.getElementById("prev-btn").removeAttribute('style');
+        document.getElementById("prev-btn").style.display = "block";
+
 
         document.getElementById('form_section').style.display = "none";
         document.getElementById('subject_section').style.display = "block";
@@ -451,6 +451,9 @@ document.getElementById('next-btn').onclick = function () {
 };
 
 document.getElementById('pub-btn').onclick = function () {
+    document.getElementById('pub-btn').disabled = true;
+    document.getElementById('pub-btn').style.backgroundColor = "#a3a3a3";
+    document.getElementById('pub-btn').classList.add("button--loading");
     console.log(sel2)
 
     document.getElementById('prev-btn').style.display = "none";
@@ -492,6 +495,9 @@ document.getElementById('pub-btn').onclick = function () {
 }
 async function mergeAllPDFs(urlarray) {
 
+    pagenumber = 0
+    maxpages = 0
+
     const url = 'https://www.banka.gr/JetBrainsMono-VariableFont_wght.ttf'
     const fontBytes = await fetch(url).then((res) => res.arrayBuffer())
 
@@ -513,7 +519,7 @@ async function mergeAllPDFs(urlarray) {
         const donorPdfBytes = await fetch(urlarray[i]).then(res => res.arrayBuffer());
         const donorPdfDoc = await PDFLib.PDFDocument.load(donorPdfBytes);
         const docLength = donorPdfDoc.getPageCount();
-        
+
         for (var k = 0; k < docLength; k++) {
             maxpages++
             const [donorPage] = await pdfDoc.copyPages(donorPdfDoc, [k]);
@@ -563,29 +569,29 @@ async function mergeAllPDFs(urlarray) {
             font: JetBrainsMono,
         }),
         page.drawText('Καλή επιτυχία!', {
-            x: width / 2 - 55,
+            x: width / 2 - 60,
             y: height - 21 * fontSize,
             size: 16,
             font: JetBrainsMono,
         })
 
 
-    
 
-    
-    
+
+
+
 
 
     for (var i = 0; i < numDocs; i++) {
         const donorPdfBytes = await fetch(urlarray[i]).then(res => res.arrayBuffer());
         const donorPdfDoc = await PDFLib.PDFDocument.load(donorPdfBytes);
         const docLength = donorPdfDoc.getPageCount();
-        
+
         for (var k = 0; k < docLength; k++) {
             pagenumber++
             const [donorPage] = await pdfDoc.copyPages(donorPdfDoc, [k]);
             donorPage.drawText(String("ΤΕΛΟΣ " + pagenumber + "ΗΣ ΑΠΟ " + maxpages + " ΣΕΛΙΔΕΣ"), {
-                x: width / 2 - 85,
+                x: width / 2 - 90,
                 y: 20,
                 size: 14,
                 font: JetBrainsMono,
@@ -599,6 +605,10 @@ async function mergeAllPDFs(urlarray) {
         new Blob([pdfBytes], { type: 'application/pdf' }),
     );
     window.open(pdfUrl, "output.pdf", "application/pdf");
+    document.getElementById('pub-btn').removeAttribute('style');
+    document.getElementById('pub-btn').style.display = "block";
+    document.getElementById('pub-btn').classList.remove("button--loading");
+    document.getElementById('pub-btn').disabled = false;
 }
 
 document.getElementById('reload-btn').onclick = function () {

@@ -1,4 +1,5 @@
 document.getElementById('class_id').onchange = function () {
+    document.getElementById('lesson_id').disabled = true;
     $(function () {
         $.ajax({
             url: 'https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/data.php?q=lesson&schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id),
@@ -45,6 +46,11 @@ document.getElementById('class_id').onchange = function () {
 document.getElementById('lesson_id').onchange = function () {
     lesson_id = document.getElementById('lesson_id').options[document.getElementById('lesson_id').selectedIndex].id;
     document.getElementById('next-btn').style.display = "none";
+
+    document.getElementById('prev-btn').disabled = true;
+    document.getElementById('prev-btn').style.backgroundColor = "#a3a3a3";
+    document.getElementById('prev-btn').classList.add("button--loading");
+
     document.getElementById('w_p').innerHTML = "Πατήστε <span style=\"background-color: #5102ac; color:white;\">Επόμενο</span> για κλήρωση θεμάτων";
     document.getElementById('warning').style.borderColor = "#46eb78";
     document.getElementById('w_s').innerHTML = "&nbsp;&#10004;&nbsp;";
@@ -66,6 +72,10 @@ document.getElementById('lesson_id').onchange = function () {
             },
             success: function (res) {
                 document.getElementById('next-btn').style.display = "block";
+                document.getElementById('prev-btn').removeAttribute('style');
+                document.getElementById('prev-btn').style.display = "block";
+                document.getElementById('prev-btn').classList.remove("button--loading");
+                document.getElementById('prev-btn').disabled = false;
                 var data_array = res.map(({ subject }) => ({ subject })).map(i => Object.values(i)).flat()
                 console.log(data_array)
 
