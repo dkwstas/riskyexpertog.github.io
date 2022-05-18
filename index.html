@@ -17,6 +17,8 @@
   <script src="selects.js" defer></script>
   <script src="https://unpkg.com/pdf-lib"></script>
   <script src="https://unpkg.com/@pdf-lib/fontkit"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type='text/javascript' src='//cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js'></script>
 </head>
 
 <body>
@@ -115,7 +117,7 @@
                 <button style="background-color:rgb(201, 201, 201);" id="no" type="button" class="button">
                   <span class="button__text">Όχι</span>
                 </button>
-                
+
               </div>
             </div>
 
@@ -134,9 +136,9 @@
         </div>
         <div class="warning" style="border-color:#535353;" id="warning1">
           <span id="w_s1" style="color: rgb(83, 83, 83); font-size: 32px;">&nbsp;&#11165;&nbsp;</span>
-          <p id="w_p1" style="font: bold 16px JetBrains Mono, san-serif;">Πατήστε <span
+          <div id="p_war1" class="marquee" data-duplicated='true' data-direction='left'><p id="w_p1" style="font: bold 16px JetBrains Mono, san-serif;">Πατήστε <span
               style="background-color: #2a7979; color:white;">κλικ</span> πάνω στα θέματα για να τα δείτε/επιλέξετε και
-            μετά <span style="background-color: #5102ac; color:white;">Έκδοση</span></p>
+            μετά <span style="background-color: #5102ac; color:white;">Έκδοση</span></p></div>
         </div>
       </div>
 
@@ -177,9 +179,9 @@
 
         <div class="warning" style="border-color:#535353;" id="warning2">
           <span id="w_s2" style="color: rgb(83, 83, 83); font-size: 32px;">&nbsp;&#11165;&nbsp;</span>
-          <p id="w_p2" style="font: bold 16px JetBrains Mono, san-serif;">Πατήστε <span
+          <div id="p_war2" class="marquee" data-duplicated='true' data-direction='left'><p id="w_p2" style="font: bold 16px JetBrains Mono, san-serif;">Πατήστε <span
               style="background-color: #2a7979; color:white;">κλικ</span> πάνω στα θέματα για να τα δείτε/επιλέξετε και
-            μετά <span style="background-color: #5102ac; color:white;">Έκδοση</span></p>
+            μετά <span style="background-color: #5102ac; color:white;">Έκδοση</span></p></div>
         </div>
       </div>
     </div>
@@ -237,7 +239,8 @@
   <div class="description">
     <small style="position: absolute;top: 0px; font: 26px Alegreya, san-serif;">&nbsp;Μακάρι να πέσει η τράπεζα τη μέρα
       των εξετάσεων...</small>
-    <a href="banka.html" style="font: 20px Roboto Condensed, san-serif; left:70%; top: 5px; position: absolute;">banka</a>
+    <a href="banka.html"
+      style="font: 20px Roboto Condensed, san-serif; left:70%; top: 5px; position: absolute;">banka</a>
 
 
 
