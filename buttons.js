@@ -8,6 +8,11 @@ var subject_sel = "yes"
 var pagenumber = 0
 var maxpages = 0
 var loops = 0
+var code_array = new Array;
+var fpages_array = new Array;
+var last_page = 0
+var message_placeholder
+
 
 document.getElementById('prev-btn').onclick = function () {
 
@@ -406,6 +411,7 @@ document.getElementById('next-btn').onclick = function () {
                     document.getElementById('span-p').style.color = "#74eb34";
 
                     f_show();
+                    document.getElementById('subject_section').style.display = "none";
                     document.getElementById('subject_1_section').style.display = "block";
 
                 }
@@ -452,6 +458,21 @@ document.getElementById('next-btn').onclick = function () {
 };
 
 document.getElementById('pub-btn').onclick = function () {
+    
+    code_array = []
+    if (sel1 != null && sel1 != "") {
+        code_array.push("1_"+sel1);
+    }
+    if (sel2 != null && sel2 != "") {
+        code_array.push("2_"+sel2);
+    }
+    if (sel3 != null && sel3 != "") {
+        code_array.push("3_"+sel3);
+    }
+    if (sel4 != null && sel4 != "") {
+        code_array.push("4_"+sel4);
+    }
+    console.log(code_array);
     if (loops == 0) {
         label_loop();
         loops++
@@ -489,9 +510,59 @@ document.getElementById('pub-btn').onclick = function () {
     }
 
 
-
+    message_placeholder = "Καλή επιτυχία!";
     document.getElementById('reload-btn').style.display = "block";
 }
+
+
+
+document.getElementById('sol-btn').onclick = function () {
+    
+    code_array = []
+    if (sel1 != null && sel1 != "") {
+        code_array.push("1_"+sel1);
+    }
+    if (sel2 != null && sel2 != "") {
+        code_array.push("2_"+sel2);
+    }
+    if (sel3 != null && sel3 != "") {
+        code_array.push("3_"+sel3);
+    }
+    if (sel4 != null && sel4 != "") {
+        code_array.push("4_"+sel4);
+    }
+    if (loops == 0) {
+        label_loop();
+        loops++
+    }
+    document.getElementById('sol-btn').disabled = true;
+    document.getElementById('sol-btn').style.backgroundColor = "#a3a3a3";
+    document.getElementById('sol-btn').classList.add("button--loading");
+
+
+    if (subject_sel == "yes") {
+        if (subject_comb == "n2-4") {
+            mergeAllPDFs(["https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+        } else if (subject_comb == "n2-4-1-3") {
+            mergeAllPDFs(["https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=solution", "https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel3 + "&filetype=solution", "https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+        } else if (subject_comb == "n2-4-3") {
+            mergeAllPDFs(["https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel3 + "&filetype=solution", "https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+        } else if (subject_comb == "n2-4-1") {
+            mergeAllPDFs(["https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=solution", "https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+        } else if (subject_comb == "o-1") {
+            mergeAllPDFs(["https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=solution"]);
+        }
+    } else {
+        if (subject_comb.includes("n2-4")) {
+            mergeAllPDFs(["https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+        } else if (subject_comb == "o-1") {
+            mergeAllPDFs(["https://reverse.banka.gr:8443/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=solution"]);
+        }
+    }
+    message_placeholder = "ΑΠΑΝΤΗΣΕΙΣ"
+}
+
+
 
 function label_loop() {
     setTimeout(function () {
@@ -521,6 +592,8 @@ function label_loop() {
 
 async function mergeAllPDFs(urlarray) {
 
+    fpages_array = []
+    last_page = 0
     pagenumber = 0
     maxpages = 0
 
@@ -532,15 +605,14 @@ async function mergeAllPDFs(urlarray) {
     pdfDoc.registerFontkit(fontkit)
     const JetBrainsMono = await pdfDoc.embedFont(fontBytes)
 
-    // Add a blank page to the document
     const page = pdfDoc.addPage()
 
-    // Get the width and height of the page
     const { width, height } = page.getSize()
 
-    // Draw a string of text toward the top of the page
     const fontSize = 30
     const numDocs = urlarray.length;
+
+
     for (var i = 0; i < numDocs; i++) {
         const donorPdfBytes = await fetch(urlarray[i]).then(res => res.arrayBuffer());
         const donorPdfDoc = await PDFLib.PDFDocument.load(donorPdfBytes);
@@ -548,8 +620,16 @@ async function mergeAllPDFs(urlarray) {
 
         for (var k = 0; k < docLength; k++) {
             maxpages++
-            const [donorPage] = await pdfDoc.copyPages(donorPdfDoc, [k]);
         }
+    }
+    fpages_array.push(1);
+
+    for (var i = 0; i < numDocs - 1; i++) {
+        const donorPdfBytes = await fetch(urlarray[i]).then(res => res.arrayBuffer());
+        const donorPdfDoc = await PDFLib.PDFDocument.load(donorPdfBytes);
+        const docLength = donorPdfDoc.getPageCount();
+        last_page = last_page + docLength
+        fpages_array.push(1 + last_page);
     }
 
     page.drawText('Από τους μαθητές του Β1 ~ 2ο ΓΕΛ ΔΡΑΜΑΣ ~', {
@@ -594,7 +674,7 @@ async function mergeAllPDFs(urlarray) {
             size: 16,
             font: JetBrainsMono,
         }),
-        page.drawText('Καλή επιτυχία!', {
+        page.drawText(message_placeholder, {
             x: width / 2 - 60,
             y: height - 21 * fontSize,
             size: 16,
@@ -602,16 +682,12 @@ async function mergeAllPDFs(urlarray) {
         })
 
 
-
-
-
-
-
-
     for (var i = 0; i < numDocs; i++) {
         const donorPdfBytes = await fetch(urlarray[i]).then(res => res.arrayBuffer());
         const donorPdfDoc = await PDFLib.PDFDocument.load(donorPdfBytes);
         const docLength = donorPdfDoc.getPageCount();
+
+
 
         for (var k = 0; k < docLength; k++) {
             pagenumber++
@@ -621,10 +697,23 @@ async function mergeAllPDFs(urlarray) {
                 y: 20,
                 size: 14,
                 font: JetBrainsMono,
-            })
-            pdfDoc.addPage(donorPage);
+            }),
+                pdfDoc.addPage(donorPage);
         }
     }
+
+    for (var i = 0; i < fpages_array.length; i++) {
+
+        console.log(i + " " + fpages_array[i] + " " + fpages_array);
+        const pages = pdfDoc.getPages()
+        pages[fpages_array[i]].drawText(String("ΘΕΜΑ " + code_array[i]), {
+            x: 5,
+            y: height - 15,
+            size: 10,
+            font: JetBrainsMono,
+        })
+    }
+
     const pdfBytes = await pdfDoc.save()
 
     const pdfUrl = URL.createObjectURL(
@@ -635,6 +724,11 @@ async function mergeAllPDFs(urlarray) {
     document.getElementById('pub-btn').style.display = "block";
     document.getElementById('pub-btn').classList.remove("button--loading");
     document.getElementById('pub-btn').disabled = false;
+
+    document.getElementById('sol-btn').removeAttribute('style');
+    document.getElementById('sol-btn').classList.remove("button--loading");
+    document.getElementById('sol-btn').disabled = false;
+    document.getElementById('sol-btn').style.display = "block";
 }
 
 document.getElementById('reload-btn').onclick = function () {

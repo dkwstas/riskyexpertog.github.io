@@ -69,6 +69,7 @@ button:active {
 }
 
 .title-1 {
+  opacity: 90%;
   width: auto;
   height: 40px;
   left: 10px;
@@ -86,6 +87,7 @@ button:active {
 }
 
 .title-2 {
+  opacity: 90%;
   width: auto;
   height: 40px;
   left: 10px;
@@ -103,6 +105,7 @@ button:active {
 }
 
 .title-3 {
+  opacity: 90%;
   width: auto;
   height: 40px;
   left: 10px;
@@ -130,7 +133,6 @@ button:active {
 .top-left {
   top: 0px;
   left: 0px;
-  background-color: rgb(255, 164, 164);
   width: 55%;
   height: 70%;
   position: absolute;
@@ -140,7 +142,6 @@ button:active {
   top: 0px;
   right: 0px;
   bottom: 30px;
-  background-color: rgb(158, 255, 158);
   width: 45%;
   height: calc(100% - 30px);
   position: absolute;
@@ -149,7 +150,6 @@ button:active {
 .bottom-left {
   bottom: 30px;
   left: 0px;
-  background-color: rgb(166, 166, 255);
   width: 55%;
   height: calc(30% - 30px);
   position: absolute;
@@ -162,6 +162,9 @@ button:active {
   position: absolute;
   box-shadow: 0 -1px 5px -1px #000;
   clip-path: inset(0px -5px -5px -5px);
+  background-color: rgb(204, 204, 204, 0.8);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .pdf-viewer {
@@ -180,7 +183,7 @@ button:active {
   height: 30px;
   width: 65%;
   position: absolute;
-  background-color: burlywood;
+  background-color: rgb(46, 54, 70);
   padding: 0px 0px;
   line-height: 0px;
   overflow: hidden;
@@ -193,7 +196,7 @@ button:active {
   bottom: 0px;
   right: 0px;
   position: absolute;
-  background-color: rgb(49, 121, 255);
+  background-color: rgb(46, 54, 70);
   font: 20px "Press Start 2P", san-serif
 }
 
@@ -207,8 +210,7 @@ button:active {
   background: #fff;
   border-radius: 5px;
   position: absolute;
-
-
+  
 }
 
 [hidden] {
