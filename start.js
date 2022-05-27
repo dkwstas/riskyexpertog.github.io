@@ -32,7 +32,7 @@ document.getElementById('get-btn').onclick = function () {
           i++
         }
 
-        
+
         document.getElementById('class_id').disabled = false;
         getBtn.classList.remove("button--loading");
 
@@ -49,3 +49,10 @@ document.getElementById('get-btn').onclick = function () {
     });
   });
 }
+
+function viewcount_loop(response) {
+  setTimeout(function () {
+    document.querySelector("#visits").textContent = response.value + " &#128065;";
+    viewcount_loop()
+  }, 10000);
+};
