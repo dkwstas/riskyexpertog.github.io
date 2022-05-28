@@ -52,7 +52,15 @@ document.getElementById('get-btn').onclick = function () {
 
 function viewcount_loop(response) {
   setTimeout(function () {
-    document.querySelector("#visits").textContent = response.value + " &#128065;";
-    viewcount_loop()
-  }, 10000);
+    document.querySelector("#visits").innerHTML = " &#128065; " + response.value;
+    $(function () {
+      $.ajax({
+        url: 'https://api.countapi.xyz/get/banka/d7f1c683-57d6-4847-95a8-4d8248affc32',
+        type: "GET",
+        success: function (response) {
+          viewcount_loop(response)
+        }
+      });
+    });
+  }, 5000);
 };
