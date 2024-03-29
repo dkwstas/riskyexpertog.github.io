@@ -103,7 +103,7 @@ document.getElementById('next-btn').onclick = function () {
 
         $(function () {
             $.ajax({
-                url: 'https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=2',
+                url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=2',
                 type: "GET",
                 dataType: 'json',
                 error: function () {
@@ -143,9 +143,9 @@ document.getElementById('next-btn').onclick = function () {
                     }
 
 
-                    link2_1 = "https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + code2_1 + "&filetype=subject";
-                    link2_2 = "https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + code2_2 + "&filetype=subject";
-                    link2_3 = "https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + code2_3 + "&filetype=subject";
+                    link2_1 = "https://trapeza.iep.edu.gr/public/showfile.php/?id=" + code2_1 + "&filetype=subject";
+                    link2_2 = "https://trapeza.iep.edu.gr/public/showfile.php/?id=" + code2_2 + "&filetype=subject";
+                    link2_3 = "https://trapeza.iep.edu.gr/public/showfile.php/?id=" + code2_3 + "&filetype=subject";
 
                     document.getElementById('sub2_1').textContent = code2_1;
 
@@ -165,7 +165,7 @@ document.getElementById('next-btn').onclick = function () {
                     $(function () {
                         $.ajax({
 
-                            url: 'https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=4',
+                            url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=4',
                             type: "GET",
                             dataType: 'json',
                             success: function (res) {
@@ -199,9 +199,9 @@ document.getElementById('next-btn').onclick = function () {
                                     $.ajax(this);
                                 }
 
-                                link4_1 = "https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + code4_1 + "&filetype=subject";
-                                link4_2 = "https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + code4_2 + "&filetype=subject";
-                                link4_3 = "https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + code4_3 + "&filetype=subject";
+                                link4_1 = "https://trapeza.iep.edu.gr/public/showfile.php/?id=" + code4_1 + "&filetype=subject";
+                                link4_2 = "https://trapeza.iep.edu.gr/public/showfile.php/?id=" + code4_2 + "&filetype=subject";
+                                link4_3 = "https://trapeza.iep.edu.gr/public/showfile.php/?id=" + code4_3 + "&filetype=subject";
 
 
                                 if (subject_comb == "n2-4-1-3") {
@@ -209,7 +209,7 @@ document.getElementById('next-btn').onclick = function () {
                                     $(function () {
                                         $.ajax({
 
-                                            url: 'https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
+                                            url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
                                             type: "GET",
                                             dataType: 'json',
                                             success: function (res) {
@@ -236,7 +236,7 @@ document.getElementById('next-btn').onclick = function () {
                                                 $(function () {
                                                     $.ajax({
 
-                                                        url: 'https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3',
+                                                        url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3',
                                                         type: "GET",
                                                         dataType: 'json',
                                                         success: function (res) {
@@ -274,7 +274,7 @@ document.getElementById('next-btn').onclick = function () {
                                     $(function () {
                                         $.ajax({
 
-                                            url: 'https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3',
+                                            url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3',
                                             type: "GET",
                                             dataType: 'json',
                                             success: function (res) {
@@ -310,7 +310,7 @@ document.getElementById('next-btn').onclick = function () {
                                     $(function () {
                                         $.ajax({
 
-                                            url: 'https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
+                                            url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
                                             type: "GET",
                                             dataType: 'json',
                                             success: function (res) {
@@ -357,7 +357,7 @@ document.getElementById('next-btn').onclick = function () {
         $(function () {
             $.ajax({
 
-                url: 'https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
+                url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
                 type: "GET",
                 dataType: 'json',
                 success: function (res) {
@@ -391,9 +391,9 @@ document.getElementById('next-btn').onclick = function () {
                         $.ajax(this);
                     }
 
-                    link1_1 = "https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + code1_1 + "&filetype=subject";
-                    link1_2 = "https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + code1_2 + "&filetype=subject";
-                    link1_3 = "https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + code1_3 + "&filetype=subject";
+                    link1_1 = "https://trapeza.iep.edu.gr/public/showfile.php/?id=" + code1_1 + "&filetype=subject";
+                    link1_2 = "https://trapeza.iep.edu.gr/public/showfile.php/?id=" + code1_2 + "&filetype=subject";
+                    link1_3 = "https://trapeza.iep.edu.gr/public/showfile.php/?id=" + code1_3 + "&filetype=subject";
 
                     document.getElementById('sub1_1').textContent = code1_1;
 
@@ -491,21 +491,21 @@ document.getElementById('pub-btn').onclick = function () {
 
     if (subject_sel == "yes") {
         if (subject_comb == "n2-4") {
-            mergeAllPDFs(["https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "n2-4-1-3") {
-            mergeAllPDFs(["https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=subject", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel3 + "&filetype=subject", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=subject", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel3 + "&filetype=subject", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "n2-4-3") {
-            mergeAllPDFs(["https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel3 + "&filetype=subject", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel3 + "&filetype=subject", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "n2-4-1") {
-            mergeAllPDFs(["https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=subject", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=subject", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "o-1") {
-            mergeAllPDFs(["https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=subject"]);
+            mergeAllPDFs(["https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=subject"]);
         }
     } else {
         if (subject_comb.includes("n2-4")) {
-            mergeAllPDFs(["https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "o-1") {
-            mergeAllPDFs(["https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=subject"]);
+            mergeAllPDFs(["https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=subject"]);
         }
     }
 
@@ -542,21 +542,21 @@ document.getElementById('sol-btn').onclick = function () {
 
     if (subject_sel == "yes") {
         if (subject_comb == "n2-4") {
-            mergeAllPDFs(["https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+            mergeAllPDFs(["https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
         } else if (subject_comb == "n2-4-1-3") {
-            mergeAllPDFs(["https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=solution", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel3 + "&filetype=solution", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+            mergeAllPDFs(["https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=solution", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel3 + "&filetype=solution", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
         } else if (subject_comb == "n2-4-3") {
-            mergeAllPDFs(["https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel3 + "&filetype=solution", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+            mergeAllPDFs(["https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel3 + "&filetype=solution", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
         } else if (subject_comb == "n2-4-1") {
-            mergeAllPDFs(["https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=solution", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+            mergeAllPDFs(["https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=solution", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
         } else if (subject_comb == "o-1") {
-            mergeAllPDFs(["https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=solution"]);
+            mergeAllPDFs(["https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=solution"]);
         }
     } else {
         if (subject_comb.includes("n2-4")) {
-            mergeAllPDFs(["https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+            mergeAllPDFs(["https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
         } else if (subject_comb == "o-1") {
-            mergeAllPDFs(["https://reverse.banka.gr:2053/https://www.iep.edu.gr/services/mitroo/trapeza/public/showfile.php/?id=" + sel1 + "&filetype=solution"]);
+            mergeAllPDFs(["https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=solution"]);
         }
     }
     message_placeholder = "ΑΠΑΝΤΗΣΕΙΣ"
