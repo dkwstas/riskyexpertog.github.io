@@ -107,7 +107,7 @@ document.getElementById('next-btn').onclick = function () {
                 type: "POST",
                 dataType: 'json',
                 contentType: 'application/x-www-form-urlencoded',
-                data: $.param( $('schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=2') ),
+                data: 'schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=2',
                 error: function () {
                     setTimeout(() => {
                         $.ajax(this);
@@ -171,7 +171,7 @@ document.getElementById('next-btn').onclick = function () {
                             type: "POST",
                             dataType: 'json',
                             contentType: 'application/x-www-form-urlencoded',
-                            data: $.param( $('schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=4') ),
+                            data: 'schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=4',
                             success: function (res) {
                                 console.log(res);
 
@@ -217,7 +217,7 @@ document.getElementById('next-btn').onclick = function () {
                                             type: "POST",
                                             dataType: 'json',
                                             contentType: 'application/x-www-form-urlencoded',
-                                            data: $.param( $('schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1') ),
+                                            data: 'schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
                                             success: function (res) {
                                                 console.log(res);
 
@@ -246,7 +246,7 @@ document.getElementById('next-btn').onclick = function () {
                                                         type: "POST",
                                                         dataType: 'json',
                                                         contentType: 'application/x-www-form-urlencoded',
-                                                        data: $.param( $('schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3') ),
+                                                        data: 'schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3',
                                                         success: function (res) {
                                                             console.log(res);
 
@@ -286,7 +286,7 @@ document.getElementById('next-btn').onclick = function () {
                                             type: "POST",
                                             dataType: 'json',
                                             contentType: 'application/x-www-form-urlencoded',
-                                            data: $.param( $('schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3') ),
+                                            data: 'schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3',
                                             success: function (res) {
                                                 console.log(res);
 
@@ -324,7 +324,7 @@ document.getElementById('next-btn').onclick = function () {
                                             type: "POST",
                                             dataType: 'json',
                                             contentType: 'application/x-www-form-urlencoded',
-                                            data: $.param( $('schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1') ),
+                                            data: 'schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
                                             success: function (res) {
                                                 console.log(res);
 
@@ -373,7 +373,7 @@ document.getElementById('next-btn').onclick = function () {
                 type: "POST",
                 dataType: 'json',
                 contentType: 'application/x-www-form-urlencoded',
-                data: $.param( $('schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1') ),
+                data: 'schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
                 success: function (res) {
                     console.log(res);
 
