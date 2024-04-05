@@ -103,9 +103,11 @@ document.getElementById('next-btn').onclick = function () {
 
         $(function () {
             $.ajax({
-                url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=2',
-                type: "GET",
+                url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php',
+                type: "POST",
                 dataType: 'json',
+                contentType: 'application/x-www-form-urlencoded',
+                data: $.param( $('schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=2') ),
                 error: function () {
                     setTimeout(() => {
                         $.ajax(this);
@@ -165,9 +167,11 @@ document.getElementById('next-btn').onclick = function () {
                     $(function () {
                         $.ajax({
 
-                            url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=4',
-                            type: "GET",
+                            url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php',
+                            type: "POST",
                             dataType: 'json',
+                            contentType: 'application/x-www-form-urlencoded',
+                            data: $.param( $('schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=4') ),
                             success: function (res) {
                                 console.log(res);
 
@@ -209,9 +213,11 @@ document.getElementById('next-btn').onclick = function () {
                                     $(function () {
                                         $.ajax({
 
-                                            url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
-                                            type: "GET",
+                                            url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php',
+                                            type: "POST",
                                             dataType: 'json',
+                                            contentType: 'application/x-www-form-urlencoded',
+                                            data: $.param( $('schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1') ),
                                             success: function (res) {
                                                 console.log(res);
 
@@ -236,9 +242,11 @@ document.getElementById('next-btn').onclick = function () {
                                                 $(function () {
                                                     $.ajax({
 
-                                                        url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3',
-                                                        type: "GET",
+                                                        url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php',
+                                                        type: "POST",
                                                         dataType: 'json',
+                                                        contentType: 'application/x-www-form-urlencoded',
+                                                        data: $.param( $('schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3') ),
                                                         success: function (res) {
                                                             console.log(res);
 
@@ -274,9 +282,11 @@ document.getElementById('next-btn').onclick = function () {
                                     $(function () {
                                         $.ajax({
 
-                                            url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3',
-                                            type: "GET",
+                                            url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php',
+                                            type: "POST",
                                             dataType: 'json',
+                                            contentType: 'application/x-www-form-urlencoded',
+                                            data: $.param( $('schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=3') ),
                                             success: function (res) {
                                                 console.log(res);
 
@@ -310,9 +320,11 @@ document.getElementById('next-btn').onclick = function () {
                                     $(function () {
                                         $.ajax({
 
-                                            url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
-                                            type: "GET",
+                                            url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php',
+                                            type: "POST",
                                             dataType: 'json',
+                                            contentType: 'application/x-www-form-urlencoded',
+                                            data: $.param( $('schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1') ),
                                             success: function (res) {
                                                 console.log(res);
 
@@ -357,9 +369,11 @@ document.getElementById('next-btn').onclick = function () {
         $(function () {
             $.ajax({
 
-                url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php?schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1',
-                type: "GET",
+                url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/searchsubjects.php',
+                type: "POST",
                 dataType: 'json',
+                contentType: 'application/x-www-form-urlencoded',
+                data: $.param( $('schooltype=1&class=' + String(document.getElementById('class_id').options[document.getElementById('class_id').selectedIndex].id) + '&lesson=' + lesson_id + '&subject=1') ),
                 success: function (res) {
                     console.log(res);
 
