@@ -137,9 +137,9 @@ document.getElementById('next-btn').onclick = function () {
                     console.log(String(random_number2_1) + " " + String(random_number2_2) + " " + String(random_number2_3));
 
                     try {
-                        code2_1 = JSON.stringify(data_array[random_number2_1]).replace('{"id":"', '').replace('"}', '');
-                        code2_2 = JSON.stringify(data_array[random_number2_2]).replace('{"id":"', '').replace('"}', '');
-                        code2_3 = JSON.stringify(data_array[random_number2_3]).replace('{"id":"', '').replace('"}', '');
+                        code2_1 = JSON.stringify(data_array[random_number2_1]).replace('{"id":', '').replace('}', '');
+                        code2_2 = JSON.stringify(data_array[random_number2_2]).replace('{"id":', '').replace('}', '');
+                        code2_3 = JSON.stringify(data_array[random_number2_3]).replace('{"id":', '').replace('}', '');
                     } catch {
                         $.ajax(this);
                     }
@@ -196,9 +196,9 @@ document.getElementById('next-btn').onclick = function () {
                                 console.log(String(random_number4_1) + " " + String(random_number4_2) + " " + String(random_number4_3));
 
                                 try {
-                                    code4_1 = JSON.stringify(data_array[random_number4_1]).replace('{"id":"', '').replace('"}', '');
-                                    code4_2 = JSON.stringify(data_array[random_number4_2]).replace('{"id":"', '').replace('"}', '');
-                                    code4_3 = JSON.stringify(data_array[random_number4_3]).replace('{"id":"', '').replace('"}', '');
+                                    code4_1 = JSON.stringify(data_array[random_number4_1]).replace('{"id":', '').replace('}', '');
+                                    code4_2 = JSON.stringify(data_array[random_number4_2]).replace('{"id":', '').replace('}', '');
+                                    code4_3 = JSON.stringify(data_array[random_number4_3]).replace('{"id":', '').replace('}', '');
                                 } catch {
                                     $.ajax(this);
                                 }
@@ -232,7 +232,7 @@ document.getElementById('next-btn').onclick = function () {
                                                 console.log(String(random_number1) + " " + String(random_number1) + " " + String(random_number1));
 
                                                 try {
-                                                    code1_1 = JSON.stringify(data_array[random_number1]).replace('{"id":"', '').replace('"}', '');
+                                                    code1_1 = JSON.stringify(data_array[random_number1]).replace('{"id":', '').replace('}', '');
                                                 } catch {
                                                     $.ajax(this);
                                                 }
@@ -261,7 +261,7 @@ document.getElementById('next-btn').onclick = function () {
                                                             console.log(String(random_number3) + " " + String(random_number3) + " " + String(random_number3));
 
                                                             try {
-                                                                code3 = JSON.stringify(data_array[random_number3]).replace('{"id":"', '').replace('"}', '');
+                                                                code3 = JSON.stringify(data_array[random_number3]).replace('{"id":', '').replace('}', '');
                                                             } catch {
                                                                 $.ajax(this);
                                                             }
@@ -301,7 +301,7 @@ document.getElementById('next-btn').onclick = function () {
                                                 console.log(String(random_number3) + " " + String(random_number3) + " " + String(random_number3));
 
                                                 try {
-                                                    code3 = JSON.stringify(data_array[random_number3]).replace('{"id":"', '').replace('"}', '');
+                                                    code3 = JSON.stringify(data_array[random_number3]).replace('{"id":', '').replace('}', '');
                                                 } catch {
                                                     $.ajax(this);
                                                 }
@@ -339,7 +339,7 @@ document.getElementById('next-btn').onclick = function () {
                                                 console.log(String(random_number1) + " " + String(random_number1) + " " + String(random_number1));
 
                                                 try {
-                                                    code1_1 = JSON.stringify(data_array[random_number1]).replace('{"id":"', '').replace('"}', '');
+                                                    code1_1 = JSON.stringify(data_array[random_number1]).replace('{"id":', '').replace('}', '');
                                                 } catch {
                                                     $.ajax(this);
                                                 }
@@ -398,9 +398,9 @@ document.getElementById('next-btn').onclick = function () {
                     console.log(String(random_number1_1) + " " + String(random_number1_2) + " " + String(random_number1_3));
 
                     try {
-                        code1_1 = JSON.stringify(data_array[random_number1_1]).replace('{"id":"', '').replace('"}', '');
-                        code1_2 = JSON.stringify(data_array[random_number1_2]).replace('{"id":"', '').replace('"}', '');
-                        code1_3 = JSON.stringify(data_array[random_number1_3]).replace('{"id":"', '').replace('"}', '');
+                        code1_1 = JSON.stringify(data_array[random_number1_1]).replace('{"id":', '').replace('}', '');
+                        code1_2 = JSON.stringify(data_array[random_number1_2]).replace('{"id":', '').replace('}', '');
+                        code1_3 = JSON.stringify(data_array[random_number1_3]).replace('{"id":', '').replace('}', '');
                     } catch {
                         $.ajax(this);
                     }
