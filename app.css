@@ -240,7 +240,7 @@ button:active {
   font: bold 15px JetBrains Mono, san-serif;
 }
 
-.warning{
+.notification{
   display: flex;
   align-items: center;
   align-content: flex-start;

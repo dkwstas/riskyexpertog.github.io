@@ -1,53 +1,46 @@
-const getBtn = document.getElementById('get-btn');
+import { get as get } from "./request.js";
+import { print_notification as print_notification } from "./notification.js";
+import { enable as enable, disable as disable, show as show, hide as hide} from "./control.js";
 
-document.getElementById('get-btn').onclick = function () {
-  getBtn.disabled = true;
-  document.getElementById('w_p').textContent = "Επιλέξτε Τάξη και Μάθημα από τα παραπάνω μενού";
-  document.getElementById('warning').style.borderColor = "#3e52d6";
-  document.getElementById('w_s').innerHTML = "&nbsp;&#9432;&nbsp;";
-  document.getElementById('w_s').style.color = "#3e52d6";
-  getBtn.style.backgroundColor = "#a3a3a3";
-  getBtn.classList.add("button--loading");
-  $(function () {
-    $.ajax({
-      url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/data.php?q=class&schooltype=1',
-      type: "GET",
-      dataType: 'json',
-      success: function (res) {
-        console.log(res);
+const start_button = document.getElementById("start_button");
+const previous_button = document.getElementById("previous_button");
+const next_button = document.getElementById("next_button");
+const class_id_dropdown = document.getElementById("class_id");
+const lesson_id_dropdown = document.getElementById("lesson_id");
 
-        document.getElementById('class_id');
+start_button.onclick = async function () {
+  disable(start_button);
+  start_button.classList.add("button--loading");
 
-        const clean_array = res.map(({ name }) => ({ name })).map(i => Object.values(i)).flat()
+  try {
+    const res = await get("data.php", "q=class&schooltype=1");
+    for (let i=0; i < res.length; i++) {
+      console.log(`${i}: ${res[i].name}`);
+      var option = document.createElement("option");
+      option.value = i;
+      option.text = res[i].name;
+      class_id_dropdown.appendChild(option);
+    }
+    print_notification("click", "Επιλέξτε Τάξη και Μάθημα από τα παραπάνω μενού");
+    class_id_dropdown.style.backgroundColor = "#30ff4c";
+    class_id_dropdown.disabled = false;
+    lesson_id_dropdown.style.backgroundColor = "#f71d0e";
+    hide(start_button);
+    show(previous_button);
+    show(next_button);
+    disable(previous_button);
+    //disable(next_button);
+    return;
+    //console.log(res);
+  } catch (error) {
+    print_notification("warning", "Δεν ήταν δυνατή η σύνδεση");
+    //console.log(error);
+  }
 
-        console.log(clean_array);
+  start_button.disabled = false;
+  start_button.classList.remove("button--loading");
+  start_button.removeAttribute('style');
 
-        var i = 0;
-        for (const val of clean_array) {
-          var option = document.createElement("option");
-          option.value = val;
-          option.id = res.map(({ id }) => ({ id })).map(i => Object.values(i)).flat()[i];
-          option.text = val.charAt(0).toUpperCase() + val.slice(1);
-          document.getElementById('class_id').appendChild(option);
-          i++
-        }
-
-
-        document.getElementById('class_id').disabled = false;
-        getBtn.classList.remove("button--loading");
-
-        getBtn.disabled = false;
-        getBtn.removeAttribute('style');
-        document.getElementById('class_id').style.backgroundColor = "#30ff4c";
-        document.getElementById('lesson_id').style.backgroundColor = "#f71d0e";
-
-        getBtn.style.display = "none";
-
-        document.getElementById("prev-btn").style.display = "block";
-
-      }
-    });
-  });
 }
 
 function viewcount_loop(response) {
