@@ -10,7 +10,7 @@ document.getElementById('get-btn').onclick = function () {
   getBtn.classList.add("button--loading");
   $(function () {
     $.ajax({
-      url: 'https://reverse.banka.gr:2053/https://trapeza.iep.edu.gr/public/data.php?q=class&schooltype=1',
+      url: 'https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/data.php?q=class&schooltype=1',
       type: "GET",
       dataType: 'json',
       success: function (res) {
