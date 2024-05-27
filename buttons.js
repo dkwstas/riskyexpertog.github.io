@@ -103,7 +103,7 @@ document.getElementById('next-btn').onclick = function () {
 
         $(function () {
             $.ajax({
-                url: 'https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/searchsubjects.php',
+                url: 'https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/searchsubjects.php',
                 type: "POST",
                 dataType: 'json',
                 contentType: 'application/x-www-form-urlencoded',
@@ -167,7 +167,7 @@ document.getElementById('next-btn').onclick = function () {
                     $(function () {
                         $.ajax({
 
-                            url: 'https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/searchsubjects.php',
+                            url: 'https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/searchsubjects.php',
                             type: "POST",
                             dataType: 'json',
                             contentType: 'application/x-www-form-urlencoded',
@@ -213,7 +213,7 @@ document.getElementById('next-btn').onclick = function () {
                                     $(function () {
                                         $.ajax({
 
-                                            url: 'https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/searchsubjects.php',
+                                            url: 'https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/searchsubjects.php',
                                             type: "POST",
                                             dataType: 'json',
                                             contentType: 'application/x-www-form-urlencoded',
@@ -242,7 +242,7 @@ document.getElementById('next-btn').onclick = function () {
                                                 $(function () {
                                                     $.ajax({
 
-                                                        url: 'https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/searchsubjects.php',
+                                                        url: 'https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/searchsubjects.php',
                                                         type: "POST",
                                                         dataType: 'json',
                                                         contentType: 'application/x-www-form-urlencoded',
@@ -282,7 +282,7 @@ document.getElementById('next-btn').onclick = function () {
                                     $(function () {
                                         $.ajax({
 
-                                            url: 'https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/searchsubjects.php',
+                                            url: 'https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/searchsubjects.php',
                                             type: "POST",
                                             dataType: 'json',
                                             contentType: 'application/x-www-form-urlencoded',
@@ -320,7 +320,7 @@ document.getElementById('next-btn').onclick = function () {
                                     $(function () {
                                         $.ajax({
 
-                                            url: 'https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/searchsubjects.php',
+                                            url: 'https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/searchsubjects.php',
                                             type: "POST",
                                             dataType: 'json',
                                             contentType: 'application/x-www-form-urlencoded',
@@ -369,7 +369,7 @@ document.getElementById('next-btn').onclick = function () {
         $(function () {
             $.ajax({
 
-                url: 'https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/searchsubjects.php',
+                url: 'https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/searchsubjects.php',
                 type: "POST",
                 dataType: 'json',
                 contentType: 'application/x-www-form-urlencoded',
@@ -505,21 +505,21 @@ document.getElementById('pub-btn').onclick = function () {
 
     if (subject_sel == "yes") {
         if (subject_comb == "n2-4") {
-            mergeAllPDFs(["https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "n2-4-1-3") {
-            mergeAllPDFs(["https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=subject", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel3 + "&filetype=subject", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=subject", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel3 + "&filetype=subject", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "n2-4-3") {
-            mergeAllPDFs(["https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel3 + "&filetype=subject", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel3 + "&filetype=subject", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "n2-4-1") {
-            mergeAllPDFs(["https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=subject", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=subject", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "o-1") {
-            mergeAllPDFs(["https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=subject"]);
+            mergeAllPDFs(["https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=subject"]);
         }
     } else {
         if (subject_comb.includes("n2-4")) {
-            mergeAllPDFs(["https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
+            mergeAllPDFs(["https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=subject", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=subject"]);
         } else if (subject_comb == "o-1") {
-            mergeAllPDFs(["https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=subject"]);
+            mergeAllPDFs(["https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=subject"]);
         }
     }
 
@@ -556,21 +556,21 @@ document.getElementById('sol-btn').onclick = function () {
 
     if (subject_sel == "yes") {
         if (subject_comb == "n2-4") {
-            mergeAllPDFs(["https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+            mergeAllPDFs(["https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
         } else if (subject_comb == "n2-4-1-3") {
-            mergeAllPDFs(["https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=solution", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel3 + "&filetype=solution", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+            mergeAllPDFs(["https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=solution", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel3 + "&filetype=solution", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
         } else if (subject_comb == "n2-4-3") {
-            mergeAllPDFs(["https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel3 + "&filetype=solution", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+            mergeAllPDFs(["https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel3 + "&filetype=solution", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
         } else if (subject_comb == "n2-4-1") {
-            mergeAllPDFs(["https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=solution", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+            mergeAllPDFs(["https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=solution", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
         } else if (subject_comb == "o-1") {
-            mergeAllPDFs(["https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=solution"]);
+            mergeAllPDFs(["https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=solution"]);
         }
     } else {
         if (subject_comb.includes("n2-4")) {
-            mergeAllPDFs(["https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
+            mergeAllPDFs(["https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel2 + "&filetype=solution", "https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel4 + "&filetype=solution"]);
         } else if (subject_comb == "o-1") {
-            mergeAllPDFs(["https://reverse.banka.gr/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=solution"]);
+            mergeAllPDFs(["https://reverse.banka.gr/services/cb/call/https://trapeza.iep.edu.gr/public/showfile.php/?id=" + sel1 + "&filetype=solution"]);
         }
     }
     message_placeholder = "ΑΠΑΝΤΗΣΕΙΣ"
